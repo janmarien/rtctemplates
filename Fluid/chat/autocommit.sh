@@ -67,5 +67,5 @@ if [[ "$1" == "manual" ]]; then
     echo "MANUAL PUSH"
     e_push "Manual commit"
 else
-    e_periodic_push $1
+    e_periodic_push 60
 fi

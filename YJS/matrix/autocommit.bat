@@ -16,7 +16,7 @@ SET timestamp=%date% %time%
 ECHO "%timestamp%" > timestamp.txt
 ECHO "Pushing code at %timestamp%"
 git add -A
-git commit -m "%timestamp%"
+git commit -m "Automatic commit %timestamp%"
 IF NOT %ERRORLEVEL% EQU 0 ( 
     ECHO "Commit failed, trying again in 1 second."
     TIMEOUT 1 > NUL
