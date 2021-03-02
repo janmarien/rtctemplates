@@ -32,8 +32,7 @@ e_push () {
 #
 e_periodic_push () {
     # Check for existing git project
-    git rev-parse --abbrev-ref HEAD
-    if [[ "$?" -ne 0 ]]; then
+    if [ ! -d ".git/" ]; then
         git init
         git config user.name "participant"
         git config user.email "<>"
@@ -67,5 +66,5 @@ if [[ "$1" == "manual" ]]; then
     echo "MANUAL PUSH"
     e_push "Manual commit"
 else
-    e_periodic_push 60
+    e_periodic_push 30
 fi

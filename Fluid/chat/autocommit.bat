@@ -1,7 +1,6 @@
 ECHO OFF
-git rev-parse --abrev-ref HEAD 2>&1 > NUL
 
-IF NOT %ERRORLEVEL% EQU 0 (
+IF NOT EXIST ".git\" (
     git init
     git config user.name "participant"
     git config user.email "<>"
@@ -23,8 +22,8 @@ IF NOT %ERRORLEVEL% EQU 0 (
     GOTO try_commit 
 ) ELSE (
     ECHO "Finished pushing code"
-    ECHO "Waiting 60 seconds"
-    TIMEOUT 60 > NUL
+    ECHO "Waiting 30 seconds"
+    TIMEOUT 30 > NUL
     GOTO periodic_commit
 )
 
