@@ -1,5 +1,5 @@
 # RTC Templates
-Templates used in the usability study for my thesis.\
+Templates used in the usability study for my thesis.
 
 Links to RTC libraries:\
 [Y.js](https://github.com/yjs/yjs)\
