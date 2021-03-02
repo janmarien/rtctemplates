@@ -22,8 +22,8 @@ IF NOT %ERRORLEVEL% EQU 0 (
     GOTO try_commit 
 ) ELSE (
     ECHO "Finished pushing code"
-    ECHO "Waiting 30 seconds"
-    TIMEOUT 30 > NUL
+    ECHO "Waiting 15 seconds"
+    TIMEOUT 15 > NUL
     GOTO periodic_commit
 )
 
